@@ -1,0 +1,140 @@
+
+body{
+	height: 100%;
+	background-color: #EED3E4;
+}
+.header{
+	font-size: 50px;
+	width: 1400px;
+	height:70px;
+	color: white;
+	font-family: 'Bookman Old Style';
+	background-color: #AA00FF;
+	position: relative;
+	font-style: italic;
+
+}
+.nav-tabs {
+	position: relative;
+	left:50px;
+
+}
+.nav-tabs li{
+	position: relative;
+	padding-right: 100px;
+	font-size: 25px;
+	font-family: 'Bookman Old Style';
+
+}
+
+ input,textarea{
+ 	width:100%;
+ }
+
+#reminderlabel{
+ 	font-size: 40px;
+ 	margin-right: auto;
+	margin-left: auto;
+	padding: 5px;
+	margin-bottom: 10px;
+ 	color:blue;
+ 	font-family: 'Bookman Old Style';
+ }
+  a#savebtn{
+ 	width:100px;
+ 	height: 40px;
+ 	background-color: blue;
+ 	font-size: 20px;
+ 	font-family: 'Bookman Old Style';
+ 	color: white;
+ 	border-bottom-right-radius: 10px;
+ 	border-top-left-radius: 10px;
+ 	border: 1px orange;
+ 	cursor: pointer;
+ 	float: right;
+ }
+  a#savebtn:hover{
+ 	background-color: #AA00FF;
+ 	color: white;
+ }
+ 
+ #todolist{
+ 	width:300px;
+ 	height: 200px;
+ }
+ #info{
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+.display{
+	top:70px;
+	position: relative;
+	width:300px;
+	height: 300px;
+	padding-top: auto;
+	padding-bottom: auto;
+	text-align: center;
+	font-family: 'Bookman Old Style';
+	font-size: 30px;
+
+}
+
+.display p{
+	position: relative;
+	padding-top: 90px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	font-family: 'Bookman Old Style';
+	font-size: 30px;
+
+}
+.blue{
+	background-color: blue;
+	color:white;
+}
+.purple{
+	background-color: purple;
+	color:white;
+}
+.blue{
+	background-color: blue;
+	color:white;
+}
+.blue:hover{
+	background-color: red;
+}
+.purple:hover{
+	background-color: green ;
+}
+.blue:hover{
+	background-color: red;
+}
+.neon {
+    color: blue;
+    text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+    0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+    0 0 40px #A5F1FF;
+    font-family: 'Bookman Old Style'
+}
+.View{
+	background-color: #AA00FF;
+	height: 70px;
+	width: 1150px;
+	font-size: 30px;
+	color: white;
+	font-family: 'Bookman Old Style';
+}
+
+#viewreminderlabel{
+ 	font-size: 40px;
+ 	margin-right: auto;
+	margin-left: auto;
+	padding: 5px;
+	margin-bottom: 10px;
+ 	color:blue;
+ 	font-family: 'Bookman Old Style';
+ }

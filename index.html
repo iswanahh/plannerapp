@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Personal planner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Stylesheet.css">
+
+  <script type="text/javascript" src="myapp.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+  <div class="header"><marquee> My Personal Planner App !</marquee></div>
+
+<div class="container">
+  <br/>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#Reminder">Reminder</a></li>
+    <li><a data-toggle="tab" href="#todo">Todo</a></li>
+    <li><a data-toggle="tab" href="#ViewRem">View Todo and Reminder</a></li>
+  </ul>
+
+
+
+<div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <div id = "info">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="display blue"><p>You can use my App to prioritize your task</p></div>
+						</div>
+						<div class="col-md-4">
+							<div class="display purple"><p>You are in the right place!</p></div>
+						</div>
+						<div class="col-md-4">
+							<div class="display blue "><p>GEt it done now!!!</p></div>
+						</div>
+					</div>
+				</div>
+    </div>
+    </div>
+
+
+
+
+	<div id="Reminder" class="tab-pane fade">
+    <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#remindercreate">Create Reminder</a></li>
+    <li><a data-toggle="tab" href="#reminderedit">Edit Reminder</a></li>
+    <li><a data-toggle="tab" href="#reminderdelete">Delete Reminder</a></li>
+  	</ul>
+
+
+
+  <div class="tab-content">
+  <div id="remindercreate" class="tab-pane fade in active">
+           	<form id = "form">
+			      	<div class="container-fluid" action="myapp.js">
+			      		<div class="row">
+					      	<label for="textarea" class="neon" id="reminderlabel">REMINDER</label>
+					      	<br/>
+					      	<div class="col-md-12">
+					      	<h3  class= "neon">Title</h3 >
+					      	<input type="text" id="title" placeholder="Title" value="">
+					      	</div>
+					     </div>
+					     <br/>
+					     <div class="row">
+					      	<div class="col-md-12">
+					      	<h3 class= "neon">Description</h3 >
+					      	<textarea id="description" placeholder="Description"></textarea>
+					      	</div>
+					     </div>
+					     <br/><br/>
+					     <div class="row">
+					      	<div class="col-md-6">
+					      	<h3 class= "neon">Category:</h3>
+					      	<select id ="category">
+					      		 <option value="Family" id = "Family">Family</option>
+								<option value="Work" id = "Work">Work</option>
+								<option value="Personal" id = "Personal">Personal</option>
+								<option value="Study" id = "Study">Study</option>
+							</select>															 
+					      	</div>
+					      	</div>
+					     <br/>
+					     <div class="row">
+					      	<div class="col-md-6">
+					      	 <h4 class= "neon">Date:</h4>
+					      	<input type="date" id="date" value="enter">
+					      	</div>
+					      	<div class="col-md-6">
+					      	 <h4 class= "neon">Time:</h4>
+					      	<input type="time" id="time" value="" >
+					      	</div>
+					     </div>
+					     <br/><br/>
+					     <div class="row">
+					     	<div class="col-md-12">
+					      	<a href="#" id="savebtn"> <span class="glyphicon glyphicon-ok"></span>&nbsp; &nbsp;Save
+							</a>
+					      	</div>
+				      	 </div>
+				      	 </div>
+				      	 </form>
+				      	 </div>
+
+<div id="reminderedit" class="tab-pane fade">
+<div class="container-fluid">
+      <table class="table View" id="Reminderview">
+      <caption class="neon" id="viewreminderlabel">SELECT DESIRED REMINDER TO EDIT<br/></caption>
+		      			<thead>
+		      				<th>Title</th>
+		      				<th>Description</th>
+		      				<th>Category</th>	
+		      				<th>Date</th>
+		      				<th>Time</th>
+		      			</thead>
+		      			<tbody>
+
+		      			</tbody>
+		      		</table>
+</div>
+</div>
+<div id="reminderdelete" class="tab-pane fade">
+<div class="container-fluid">
+      <table class="table View" id="Reminderdelete">
+      <caption class="neon" id="viewreminderlabel">SELECT DESIRED REMINDER TO DELETE<br/></caption>
+		      			<thead>
+		      				<th>Title</th>
+		      				<th>Description</th>
+		      				<th>Category</th>	
+		      				<th>Date</th>
+		      				<th>Time</th>
+		      				<th>Delete</th>		
+		      			</thead>
+		      			<tbody>
+
+		      			</tbody>
+		      		</table>
+</div>
+	</div>
+	</div>
+	</div>
+
+
+
+
+
+    <div id="todo" class="tab-pane fade">
+    <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#todocreate">Create Todo</a></li>
+    <li><a data-toggle="tab" href="#todoedit">Edit Todo</a></li>
+    <li><a data-toggle="tab" href="#tododelete">Delete Todo</a></li>
+  </ul>
+
+<div class="tab-content">
+	<div id="todocreate" class="tab-pane fade in active">
+		           	<form id = "form">
+			      	<div class="container-fluid">
+			      		<div class="row">
+					      	<label for="textarea" class="neon" id="reminderlabel">TODO</label>
+					      	<br/>
+					      	<div class="col-md-12">
+					      	<h3  class= "neon">Title</h3 >
+					      	<input type="text" id="todotitle" placeholder="Title" value="">
+					      	</div>
+					     </div>
+					     <br/>
+					     <div class="row">
+					      	<div class="col-md-12">
+					      	<h3 class= "neon">Description</h3 >
+					      	<textarea id="tododescription" placeholder="Description"></textarea>
+					      	</div>
+					     </div>
+					     <br/><br/>
+					     <div class="row">
+					      	<div class="col-md-6">
+					      	<h3 class= "neon">Category:</h3>
+
+					      	<select id ="todocategory">
+					      		 <option value="Family" id = "Family">Family</option>
+								<option value="Work" id = "Work">Work</option>
+								<option value="Personal" id = "Personal">Personal</option>
+								<option value="Study" id = "Study">Study</option>
+							</select>
+															 
+					      	</div>
+					     
+					     </div>
+					     <br/>
+					      
+					     <br/><br/>
+					     <div class="row">
+					     	
+					     	<div class="col-md-12">
+					      	<a href="#" id = "Tsavebtn"> <span class="glyphicon glyphicon-ok"></span>&nbsp; &nbsp;Save
+							</a>
+					      	</div>
+				      	 </div>
+				      	</div>
+				      	 </form>
+			 </div>
+
+	<div id="todoedit" class="tab-pane fade">
+	<div class="container-fluid">
+      <table class="table View" id="Todoview">
+      <caption class="neon" id="viewreminderlabel">SELECT DESIRED TODO TO EDIT<br/></caption>
+		      			<thead>
+		      				<th>Title</th>
+		      				<th>Description</th>
+		      				<th>Category</th>	
+		      			</thead>
+		      			<tbody>
+
+		      			</tbody>
+		      		</table>
+
+	</div>
+	</div>
+
+	<div id="tododelete" class="tab-pane fade">
+	<div class="container-fluid">
+      <table class="table View" id="Tododelete">
+      <caption class="neon" id="viewreminderlabel">SELECT DESIRED TODO TO DELETE<br/></caption>
+		      			<thead>
+		      				<th>Title</th>
+		      				<th>Description</th>
+		      				<th>Category</th>
+		      				<th>Delete</th>
+		      			</thead>
+		      			<tbody>
+
+		      			</tbody>
+		      		</table>
+	</div>
+
+</div>
+</div>
+</div>
+
+
+
+
+    <div id="ViewRem" class="tab-pane fade" >
+    <div class="container-fluid">
+      <table class="table View" id="ViewReminder">
+      <caption class="neon" id="viewreminderlabel">VIEW ALL TO DO AND REMINDER<br/></caption>
+		      			<thead>
+		      				<th>Title</th>
+		      				<th>Description</th>
+		      				<th>Category</th>	
+		      				<th>Date</th>
+		      				<th>Time</th>
+		      			</thead>
+		      			<tbody>
+
+		      			</tbody>
+		      		</table>
+  </div>
+  </div>
+
+
+
+
+  </div>
+</div>
+<script type="text/javascript" src = "myapp.js"></script>
+</body>
+</html>
